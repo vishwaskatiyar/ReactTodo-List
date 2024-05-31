@@ -27,13 +27,14 @@ const AddTodo = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="mb-4">
       <input
         type="text"
         name="description"
         placeholder="Description"
         value={todo.description}
         onChange={handleChange}
+        className="w-full px-4 py-2 mb-2 border rounded-md focus:outline-none focus:border-blue-500"
         required
       />
       <input
@@ -41,12 +42,14 @@ const AddTodo = () => {
         name="dueDate"
         value={todo.dueDate}
         onChange={handleChange}
+        className="w-full px-4 py-2 mb-2 border rounded-md focus:outline-none focus:border-blue-500"
         required
       />
       <select
         name="priority"
         value={todo.priority}
         onChange={handleChange}
+        className="w-full px-4 py-2 mb-2 border rounded-md focus:outline-none focus:border-blue-500"
         required
       >
         <option value="">Priority</option>
@@ -59,8 +62,14 @@ const AddTodo = () => {
         placeholder="Notes"
         value={todo.notes}
         onChange={handleChange}
+        className="w-full px-4 py-2 mb-2 border rounded-md focus:outline-none focus:border-blue-500"
       />
-      <button type="submit">Add Todo</button>
+      <button
+        type="submit"
+        className="px-4 py-2 bg-blue-500 text-white rounded-md focus:outline-none"
+      >
+        Add Todo
+      </button>
     </form>
   );
 };

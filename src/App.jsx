@@ -13,8 +13,8 @@ const App = () => {
 
 const AppContent = () => {
   return (
-    <div>
-      <h1>Todo Application</h1>
+    <div className="max-w-md mx-auto p-4 bg-gray-500 rounded shadow-xl">
+      <h1 className="text-3xl font-bold text-center mb-4">Todo Application</h1>
       <ThemeToggle />
       <AddTodo />
       <TodoList />
